@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://monarch-os.github.io/sitemap.xml
+
+# Désactiver l'indexation des fichiers de développement
+Disallow: /.github/
+Disallow: /node_modules/
+Disallow: /*.log
+Disallow: /package*.json
+
+# Autoriser l'indexation des assets (images, CSS, JS)
+Allow: /assets/

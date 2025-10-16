@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page non trouvée - Monarch OS</title>
+    <meta name="description" content="Page non trouvée - Monarch OS">
+    
+    <!-- Performance optimizations -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <link rel="preload" href="./assets/logo.svg" as="image" type="image/svg+xml">
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    
+    <!-- Preconnect for critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/nerd-fonts@1.0.0/nerd-fonts.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'mono': ['JetBrains Mono', 'monospace'],
+                        'sans': ['Inter', 'sans-serif'],
+                        'cyber': ['Orbitron', 'monospace'],
+                        'nerd': ['NerdFonts', 'monospace'],
+                    },
+                    colors: {
+                        // Monarch OS royal purple palette
+                        'monarch-purple': '#8B5CF6',
+                        'monarch-purple-light': '#A78BFA',
+                        'monarch-purple-dark': '#7C3AED',
+                        'monarch-deep': '#1E1B4B',
+                        'monarch-deeper': '#0F0B2E',
+                        'monarch-card': '#312E81',
+                        'monarch-text': '#E0E7FF',
+                        'monarch-text-dim': '#C7D2FE',
+                        'monarch-glow': '#8B5CF6',
+                        'monarch-glow-dark': '#7C3AED',
+                        'monarch-accent': '#A78BFA',
+                        'monarch-circuit': '#C4B5FD',
+                        'monarch-stars': '#E0E7FF',
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'glow-purple': 'glowPurple 3s ease-in-out infinite alternate',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+                            '50%': { transform: 'translateY(-8px) scale(1.02)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(139, 92, 246, 0.5)' },
+                            '100%': { boxShadow: '0 0 20px rgba(139, 92, 246, 0.8)' }
+                        },
+                        glowPurple: {
+                            '0%': { 
+                                boxShadow: '0 0 10px rgba(139, 92, 246, 0.3), 0 0 20px rgba(139, 92, 246, 0.1)',
+                                textShadow: '0 0 10px rgba(139, 92, 246, 0.5)'
+                            },
+                            '100%': { 
+                                boxShadow: '0 0 20px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.3)',
+                                textShadow: '0 0 20px rgba(139, 92, 246, 0.8)'
+                            }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .text-glow {
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4);
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes textGlow {
+            '0%': { 
+                textShadow: '0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4)'
+            },
+            '100%': { 
+                textShadow: '0 0 30px rgba(139, 92, 246, 1), 0 0 60px rgba(139, 92, 246, 0.8), 0 0 90px rgba(139, 92, 246, 0.6)'
+            }
+        }
+        
+        .logo-glow {
+            filter: drop-shadow(0 0 20px rgba(167, 139, 250, 0.9));
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-float,
+            .text-glow {
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-monarch-deep text-monarch-text min-h-screen flex items-center justify-center">
+    <div class="text-center max-w-2xl mx-auto px-8">
+        <!-- Logo -->
+        <div class="flex justify-center mb-8">
+            <img src="./assets/logo.svg" alt="Monarch OS Logo" class="w-24 h-24 sm:w-32 sm:h-32 animate-float logo-glow">
+        </div>
+        
+        <!-- Error Code -->
+        <h1 class="text-8xl md:text-9xl font-black mb-6 text-monarch-glow leading-tight font-cyber tracking-wider text-glow">
+            404
+        </h1>
+        
+        <!-- Error Message -->
+        <h2 class="text-2xl md:text-3xl mb-6 text-monarch-text font-semibold">
+            Page non trouvée
+        </h2>
+        
+        <p class="text-lg mb-8 text-monarch-text-dim leading-relaxed">
+            La page que vous recherchez semble avoir été déplacée ou n'existe plus.
+        </p>
+        
+        <!-- Navigation -->
+        <div class="flex justify-center gap-4 flex-wrap">
+            <a href="/" class="inline-flex items-center gap-2 px-6 py-3 bg-monarch-glow text-black font-semibold rounded-full hover:bg-monarch-purple-light transform hover:-translate-y-1 transition-all duration-300">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                Retour à l'accueil
+            </a>
+            
+            <a href="javascript:history.back()" class="inline-flex items-center gap-2 px-6 py-3 bg-monarch-card/30 backdrop-blur-sm text-monarch-text font-semibold rounded-full hover:bg-monarch-card/60 hover:text-monarch-glow transform hover:-translate-y-1 transition-all duration-300">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5"/>
+                    <polyline points="12,19 5,12 12,5"/>
+                </svg>
+                Page précédente
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Simple fade-in animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('h1, h2, p, div > a');
+            elements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
